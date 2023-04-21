@@ -1,0 +1,404 @@
+<html5>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">   
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <title>Daren Server</title>
+        <style>
+            /* Page Design */
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #FDF4E3; 
+                background-color: #FAF5E9;
+                background-color: white;
+            }
+
+            /* Styling for Tabs */
+            ul.tab-nav {
+                list-style: none;
+                border-bottom: 1px solid #0074B7;
+                padding-left: 5px;
+            }
+
+            ul.tab-nav li {
+                display: inline;
+            }
+
+            ul.tab-nav li a.button {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                margin-bottom: -1px;
+                border-bottom: none;
+				border-color: #0074B7;
+            }
+
+            ul.tab-nav li a.active.button {
+                border-bottom: 0.175em solid #ffffff;
+            }
+
+            .tab-content .tab-pane {
+                display: none;
+            }
+
+            .tab-content .tab-pane.active {
+                display: block;
+            }
+
+            /* Styling for Tables */
+            th,
+            td {
+              padding: 12px 15px;
+              text-align: left;
+              border-bottom: 1px solid #E1E1E1; }
+            th:first-child,
+            td:first-child {
+              padding-left: 0; }
+            th:last-child,
+            td:last-child {
+              padding-right: 0; }
+
+
+            /* Header Title Bar */
+            .header {
+            overflow: hidden;
+            background-color: #0074B7;
+            padding: 20px 10px;
+            }
+
+            .header a {
+            float: left;
+            margin-left: 770px;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px; 
+            line-height: 25px;
+            border-radius: 4px;
+            }
+
+            .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+            }
+
+            .header a:hover {
+            /* background-color: #ddd; */
+            /* color: black; */
+            }
+
+            .header a.active {
+            background-color: dodgerblue;
+            color: white;
+            }
+
+            .header-right {
+            float: right;
+            }
+
+            @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            
+            .header-right {
+                float: none;
+            }
+        }
+        </style>
+    </head>
+    <body>
+    
+        <div class="header">
+            <a class="logo">Four Sons</a>
+            <!--Version and Site Status (Update Status to reflect connection)-->
+            <div class="logo" style="position: absolute; top: 5px; left: 10px; width: 120px; text-align:left; font-size: 18px; color:white;">Version 1.0</div>
+            <div class="logo" id="connectionStatus" style="position: absolute; top: 5px; right: 10px; width: 200px; text-align:right; font-size: 18px; color:white;">Status:<span id="statusIndicator" style="color: white; font-weight:bold"> Pending</span></div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+              <div class="twelve columns" style="margin-top: 5%">
+                <!--Setting Tabs--> 
+                <ul class="tab-nav">
+                  <li>
+                    <a class="button active" onclick="tabControls(this)" href="#one">Configuration</a>
+                  </li>
+                  <li>
+                    <a class="button" onclick="tabControls(this)" href="#two">Status</a>
+                  </li>
+                  <li>
+                    <a class="button" onclick="tabControls(this)" href="#three">Report</a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                    
+                    <div class="tab-pane active" id="one">
+                        <div class="one-half column">
+                            <h5>Settings</h5>
+                            <div class="content">
+                                <label style="color: #0074B7">Config Menu</label><br/>
+                                <table class="u-full-width" style="color: black;">
+                                <tbody>
+                                    <tr>
+                                    <td>Username: </td>
+                                    <td> <input type="text" id="txtUName" name="txtUName" style="width: 210px"/> </td>
+                                    </tr>
+                                    <tr>
+                                    <td>Passphrase: </td>
+                                    <td> <input type="password" id="txtPass" name="txtPass" style="width: 210px"/> </td>
+                                    </tr>
+                                    <tr>
+                                    <td>IP Address: </td>
+                                    <td> <input type="text" id="txtIPAddy" name="txtIPAddy" style="width: 210px"/> </td>
+                                    </tr>
+                                    <tr>
+                                    <td>Return Address Port: </td>
+                                    <td> <input type="text" id="txtPort" name="txtPort" style="width: 210px"/> </td>
+                                    </tr>
+                                    <tr>
+                                    <td>Classification: </td>
+                                    <td> <input type="text" id="classificate" name="classificate" readonly="true" disabled style="width: 210px"/> </td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                                <div class="row">
+                                  <div class="one column" style="margin-right: 6%;">
+                                    <label for="unitTest">Units? </label>
+                                    <input type="checkbox" id="unitTest" name="unitTest"/><br/>
+                                  </div>
+                                  <div class="one column" style="margin-right: 15%">
+                                    <label for="geoTest">Geometries? </label>
+                                    <input type="checkbox" id="geoTest" name="geoTest"/><br/>
+                                  </div>
+                                  <div class="one column" style="margin-bottom: 2%">
+                                    <label for="targTest">Targets? </label>
+                                    <input type="checkbox" id="targTest" name="targTest"/><br/>
+                                  </div>
+                                </div>
+                                <p><button id="ID_sendConfig" onclick="sendConfig(this)" style="color: green">Save Configuration</button></p>
+                            </div>
+                        </div>
+                        <div class="one-half column">
+                            <h5>Connector</h5>
+                            <div class="content">
+                                <p><button id="startIt" onclick="startConnector(this)" style="color: green">Start Connector</button></p>
+                                <p><button id="stopIt" onclick="stopConnector(this)" style="color: red">Stop Connector</button></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="two">
+						<div class="one-half column">
+							<h5>Commands</h5>
+                            <p><button id="numberMessages" onclick="pingServer(this)" style="color: #0074B7">Ping Server</button></p>
+							<p><button id="serverStatus" onclick="getStatus(this)" style="color: #0074B7">Check Server Connnection</button></p>
+							<p><button id="numberMessages" onclick="getMessageCount(this)" hidden="hidden" style="color: #0074B7">Number of Messages Received</button></p>
+						</div>
+					  <div class="one-half column">
+					  <h5>Server Log</h5>
+						<div class="serverLog" >
+							<form>
+								<textarea rows="5" cols="80" name="LogInfo" spellcheck="false" id="serverLog" style="resize: none; height: 200px; width: 600px; margin-right: 10px;" readonly></textarea>
+							</form>
+						</div>
+					  </div>
+                    </div>
+
+                    <div class="tab-pane" id="three">
+                        <h5>Reporting</h5>
+                        <div class="content">
+                            <table class="u-full-width">
+                                <thead>
+                                  <tr>
+                                    <th style="color: #0074B7">Data</th>
+                                    <th style="color: #0074B7">Counts</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Geometry</td>
+                                    <td id="geoVal">0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Units</td>
+                                    <td id="unitVal">0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Targets</td>
+                                    <td id="targetVal">0</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+        <script>
+            
+            
+            
+    
+            // Restarts the connector during config update
+            function restartConnector()
+            {
+                const textarea = document.getElementById('serverLog');
+    
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open( "GET", "admin/stop", false ); 
+                xmlHttp.send( null );
+                console.log(xmlHttp.responseText);
+                if (xmlHttp.responseText == "true") 
+                {
+                    textarea.value += getCurrentTimeAndDate() + 'Connector Stopped.\n\n';
+                    document.getElementById("statusIndicator").style.color = 'red';
+                    document.getElementById("statusIndicator").textContent = " Offline";
+                }
+                else
+                {
+                	textarea.value += getCurrentTimeAndDate() + 'Server is out of sync. \n\n';
+                }
+                
+                resetObjects();
+
+                textarea.value += getCurrentTimeAndDate() + 'Connector Initializing...\n';
+                
+                // Send start request
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open( "GET", "admin/start", false ); 
+                xmlHttp.send( null );
+                console.log(xmlHttp.responseText);
+                // Check status before logging
+                xmlHttp.open( "GET", "admin/status", false ); 
+                xmlHttp.send( null );
+                console.log(xmlHttp.responseText);
+
+                if (xmlHttp.responseText == "OPERATIONAL") 
+                {
+                    textarea.value += getCurrentTimeAndDate() + 'Connector Started.\n\n';
+                    document.getElementById("statusIndicator").style.color = '#04AA6D';
+                    document.getElementById("statusIndicator").textContent = " Online";
+                    connect();
+                    return true;
+                }
+                else
+                {
+                    textarea.value += getCurrentTimeAndDate() + 'Connector Failed to start. Please verify login credentials.\n\n';
+                    return false;
+                }
+            }
+
+    
+            // Gets number of total entries
+            function getTotalEntries(data) 
+            {
+                const textarea = document.getElementById('serverLog');
+                const geoValues = document.getElementById("geoVal");
+                const unitValues = document.getElementById("unitVal");
+                const targetValues = document.getElementById("targetVal");
+                
+                geoValues.innerHTML = data.GEOMETRY.toString();
+                unitValues.innerHTML = data.UNITS.toString();
+                targetValues.innerHTML = data.TARGETS.toString();
+                
+                textarea.value += getCurrentTimeAndDate() + 'Object Information: \n';
+                textarea.value += JSON.stringify(data) + '\n\n';
+    
+                this.addEventListener('click', function handleClick() {
+                    //auto_grow(textarea);
+                    document.getElementById("serverLog").scrollTop = document.getElementById("serverLog").scrollHeight;
+                });
+            }
+    
+            // Creates timestamp for messages
+            function getCurrentTimeAndDate() 
+            {
+                var date = new Date();
+                var month = date.getMonth() + 1;
+                var day = date.getDate();
+                var year = date.getFullYear();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+    
+                if (month < 10) {
+                    month = "0" + month;
+                }
+    
+                if (day < 10) {
+                    day = "0" + day;
+                }
+    
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+    
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+    
+                return "[" + month + "/" + day + "/" + year + " " + hours + ":" + minutes + "] ";
+            }
+            
+            
+            // Updates color and text of Status tool
+            function statusChecker(state)
+            {
+                if (state == "OPERATIONAL") 
+                {
+                    document.getElementById("statusIndicator").style.color = '#04AA6D';
+                    document.getElementById("statusIndicator").textContent = " Online";
+                }
+                else 
+                {
+                    document.getElementById("statusIndicator").style.color = 'red';
+                    document.getElementById("statusIndicator").textContent = " Offline";
+                }
+            }
+
+            // on page load/refresh function
+            window.onload = function() 
+            {
+                const username = document.getElementById("txtUName");
+                const pass = document.getElementById("txtPass");
+                const IPaddy = document.getElementById("txtIPAddy");
+                const IPort = document.getElementById("txtPort");
+            }
+            
+            // Confirmation modal box
+            const confirmAction = () => 
+            {
+                    const response = confirm("Are you sure you want to update the settings?");
+                    if (response) 
+                    {
+                        return true;
+                    } else 
+                    {
+                        return false;
+                    }
+            }
+
+            // Tab functionality
+            function tabControls() 
+            {
+                var tabButtons = [].slice.call(document.querySelectorAll('ul.tab-nav li a.button'));
+
+                tabButtons.map(function(button) {
+                    button.addEventListener('click', function() {
+                        document.querySelector('li a.active.button').classList.remove('active');
+                        button.classList.add('active');
+
+                        document.querySelector('.tab-pane.active').classList.remove('active');
+                        document.querySelector(button.getAttribute('href')).classList.add('active');
+                    });
+                });
+            }
+    
+        </script>
+    </body>
+</html5>
