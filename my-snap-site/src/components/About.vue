@@ -6,3 +6,9 @@
     </p>
   </section>
 </template>
+
+<script>
+export default {
+  name: 'AboutSection',
+};
+</script>
