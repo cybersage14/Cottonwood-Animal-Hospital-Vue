@@ -1,17 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <HomePage />
+    <ServicesPage />
+  </div>
 </template>
 
+
 <script>
-import Services from './components/Services.vue';
-import Home from './components/Home.vue';
+import './main.js';
+import ServicesPage from './components/ServicesPage.vue';
+import HomePage from './components/HomePage.vue';
 
 export default {
   name: 'App',
   components: {
-    Home,
-    Services
+    HomePage,
+    ServicesPage
   },
   data() {
     return {

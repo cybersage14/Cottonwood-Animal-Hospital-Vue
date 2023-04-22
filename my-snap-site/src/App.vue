@@ -1,44 +1,31 @@
 <template>
-  <div id="app">
-    <header>
-      <h1>{{ title }}</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/services">Services</router-link></li>
-      </ul>
-    </nav>
-    <router-view />
-    <AboutPage />
-  </div>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+    <li><router-link to="/services">Services</router-link></li>
+  </nav>
+  <router-view/>
 </template>
-
-
-<script>
-
-import AboutPage from './components/About.vue';
-
-export default {
-  name: 'App',
-  components: {
-    AboutPage
-  },
-  data() {
-    return {
-      title: 'Animal Hospital'
-    }
-  }
-}
-</script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>

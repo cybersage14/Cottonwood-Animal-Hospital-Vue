@@ -5,3 +5,16 @@ module.exports = defineConfig({
     : '/',
   transpileDependencies: true
 })
+module.exports = {
+  pages: {
+    index: {
+      entry: 'home/main.js',
+      title: 'Home'
+    }
+  }
+}
+module.exports = {
+  chainWebpack: config => {
+    config.entry('app').clear().add('./home/src/main.js').end();
+  }
+}
