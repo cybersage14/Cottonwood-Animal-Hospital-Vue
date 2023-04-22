@@ -1,30 +1,8 @@
 <template>
-  <div class="about">
-    <h2>About Us</h2>
-    <p>We are a full-service animal hospital dedicated to providing the highest quality veterinary care for your pets.</p>
-  </div>
+  <section id="about" class="section">
+    <h2>About Little Cottonwood Animal Hospital</h2>
+    <p>
+      <!-- Add a brief description of the business here -->
+    </p>
+  </section>
 </template>
-
-<script>
-export default {
-  name: 'AboutPage'
-}
-</script>
-  
-  <style scoped>
-  .about {
-    text-align: center;
-    margin: 50px 0;
-  }
-  .about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  .about p {
-    font-size: 18px;
-    line-height: 1.5;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  </style>
-  
