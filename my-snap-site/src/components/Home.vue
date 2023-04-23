@@ -1,5 +1,8 @@
 <template>
     <div class="home">
+        <header :class="{ shrink: shrinkHeader }">
+            <!-- Add the header content here -->
+        </header>
       <!-- Hero Section -->
       <section class="hero">
         <div class="container">
@@ -32,9 +35,25 @@
   import Services from "./Services.vue";
   
   export default {
-  name: 'HomePage', // Add this line to change the component name
+  name: "HomePage",
   components: {
     Services,
+  },
+  data() {
+    return {
+      shrinkHeader: false,
+    };
+  },
+  methods: {
+    handleScroll() {
+      this.shrinkHeader = window.scrollY > 50;
+    },
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>

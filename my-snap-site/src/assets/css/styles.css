@@ -193,3 +193,16 @@
   padding: 10px 0;
   transition: all 0.5s;
 }
+
+header.shrink {
+  height: 60px; /* Adjust this value to change the height of the header when it shrinks */
+  background-color: #ffffff; /* Change this value to set the background color of the shrunken header */
+}
+
+header.shrink h1 {
+  font-size: 20px; /* Adjust this value to change the font size of the header title when it shrinks */
+}
+
+header.shrink nav ul li a {
+  font-size: 12px; /* Adjust this value to change the font size of the navigation links when the header shrinks */
+}
