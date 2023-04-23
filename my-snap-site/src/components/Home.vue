@@ -3,8 +3,8 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="container">
-          <h1>Welcome to Our Animal Hospital</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h1>Compassionate Veterinarians</h1>
+          <p>Here for you and your pet's needs!.</p>
         </div>
       </section>
   

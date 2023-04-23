@@ -25,7 +25,7 @@
   
   /* Update the header styles */
   header {
-    background-color: #ffffff; /* Adjust the last value (0.85) to control opacity */
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +55,7 @@
   }
   
   nav ul li a {
-    color: #000; /* Black color */
+    color: #000;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: bold;
@@ -66,6 +66,7 @@
   }
   
   .hero {
+    margin-top: 100px;
     background: url('https://www.ranchovillagevet.com/storage/app/media/photos/ranchovillagevet-clinic.jpg') no-repeat center center/cover;
     height: 400px;
     display: flex;
@@ -186,4 +187,9 @@
 .cta p {
   font-size: 18px;
   margin-bottom: 40px;
+}
+
+.shrink {
+  padding: 10px 0;
+  transition: all 0.5s;
 }
