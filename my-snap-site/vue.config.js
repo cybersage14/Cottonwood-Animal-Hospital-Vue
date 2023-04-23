@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  publicPath: process.env.NODE_ENV ===  '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/my-snap-site/' : '/',
   transpileDependencies: true,
   pages: {
     index: {
