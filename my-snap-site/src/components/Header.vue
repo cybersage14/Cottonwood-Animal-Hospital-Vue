@@ -1,8 +1,8 @@
 <template>
   <header :class="{ 'shrink': shrinkHeader }">
     <div class="logo">
-      <a href="/">Little Cottonwood Animal Hospital</a>
-    </div>
+      <a href="/"><img :src="logo" alt="Little Cottonwood Animal Hospital"></a>
+  </div>
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       shrinkHeader: false,
+      logo: './img/logo.png',
     };
   },
   mounted() {
@@ -39,6 +40,7 @@ export default {
 </script>
 
 <style scoped>
+
 .fixed-header {
   position: fixed;
   top: 0;
@@ -47,5 +49,19 @@ export default {
   background-color: rgba(255, 255, 255, 1);
   z-index: 0;
   /* Add other styles as needed */
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #2980b9;
 }
 </style>
