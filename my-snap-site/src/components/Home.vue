@@ -3,8 +3,8 @@
     <HeroSection />
     <ServicesSection />
     <AboutSection />
-    <ContactSection />
     <CallToActionSection />
+    <ContactSection />
   </div>
 </template>
 
@@ -12,8 +12,8 @@
 import HeroSection from './Hero.vue';
 import ServicesSection from './Services.vue';
 import AboutSection from './About.vue';
-import ContactSection from './Contact.vue';
 import CallToActionSection from './CallToAction.vue';
+import ContactSection from './Contact.vue';
 
 export default {
   name: "HomePage",
@@ -21,8 +21,8 @@ export default {
     HeroSection,
     ServicesSection,
     AboutSection,
-    ContactSection,
     CallToActionSection,
+    ContactSection,
   },
 };
 </script>

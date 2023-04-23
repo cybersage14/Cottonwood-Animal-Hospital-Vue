@@ -31,11 +31,13 @@ export default {
 }
 
 .hero h1 {
+  color: white;
   font-size: 48px;
   margin-bottom: 20px;
 }
 
 .hero p {
+  color: white;
   font-size: 24px;
   max-width: 800px;
   margin: 0 auto;
