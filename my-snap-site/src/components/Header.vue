@@ -20,9 +20,9 @@
 export default {
   name: "HeaderComponent",
   data() {
-    return {
-      shrinkHeader: false,
-      logo: "@/assets/img/logo.png",
+  return {
+    shrinkHeader: false,
+    logo: require('@/assets/img/logo.png'), // use require to resolve the path
     };
   },
   mounted() {
