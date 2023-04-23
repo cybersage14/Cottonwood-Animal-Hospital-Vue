@@ -17,14 +17,28 @@ export default {
 
 <style scoped>
 .hero {
-  background-image: url('@/assets/img/home_page1.jpg'); /* Replace this path with the actual path to your hero image */
+  height: 50vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/img/home_page1.jpg');
   background-size: cover;
   background-position: center;
-  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: #ffffff;
   text-align: center;
-  color: #fff;
+  margin-top: 100px;
 }
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 </style>

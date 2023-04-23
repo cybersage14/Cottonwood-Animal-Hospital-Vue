@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="section" style="margin-top: 150px;">
+  <section id="services" class="section" style="margin-top: 80px;">
     <h2>Services Offered</h2>
     <div class="services-container">
       <div class="service">

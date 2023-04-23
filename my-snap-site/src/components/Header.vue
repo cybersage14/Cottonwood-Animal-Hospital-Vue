@@ -83,6 +83,7 @@ nav ul li a {
 
 .contact-btn-container {
   display: flex;
+  margin-right: 20px;
 }
 
 .contact-btn {
