@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+    <header class="container">
+      <div class="logo">
+        <!-- Add your logo here -->
+      </div>
+      <a href="#" class="contact-button">Contact</a>
+    </header>
+    <router-view></router-view>
     <Header />
     <Hero />
     <About />
