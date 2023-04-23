@@ -1,28 +1,11 @@
 <template>
   <div id="app">
-    <Header />
-    <Hero />
-    <About />
-    <Services />
-    <!-- Add more components here -->
-    <Footer />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Hero from './components/Hero.vue';
-import About from './components/About.vue';
-import Services from './components/Services.vue';
-import Footer from './components/Footer.vue';
-
 export default {
-  components: {
-    Header,
-    Hero,
-    About,
-    Services,
-    Footer
-  }
-}
+  components: {}
+};
 </script>
