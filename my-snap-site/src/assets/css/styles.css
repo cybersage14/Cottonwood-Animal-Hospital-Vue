@@ -23,20 +23,25 @@
     padding: 0 20px;
   }
   
-  /* Update the header styles */
   header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 40px;
     background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
     z-index: 1000;
-    position: relative;
   }
   
   header h1 {
     color: #fff;
     text-transform: uppercase;
+  }
+
+  header.shrink {
+    padding: 10px 40px;
   }
   
   nav {
@@ -160,6 +165,16 @@
   font-size: 24px;
 }
 
+.service {
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
 /* Services Section */
 .services {
   background-color: #f8f9fa;
@@ -194,15 +209,23 @@
   transition: all 0.5s;
 }
 
-header.shrink {
+.fixed-header.shrink {
   height: 60px; /* Adjust this value to change the height of the header when it shrinks */
   background-color: #ffffff; /* Change this value to set the background color of the shrunken header */
 }
 
-header.shrink h1 {
-  font-size: 20px; /* Adjust this value to change the font size of the header title when it shrinks */
+.fixed-header.shrink .nav-links li a {
+  font-size: 12px; /* Adjust this value to change the font size of the navigation links when the header shrinks */
 }
 
-header.shrink nav ul li a {
-  font-size: 12px; /* Adjust this value to change the font size of the navigation links when the header shrinks */
+.fixed-header.shrink .contact-button {
+  font-size: 14px; /* Adjust this value to change the font size of the contact button when the header shrinks */
+  padding: 8px 16px;
+}
+
+.contact-btn-container {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
