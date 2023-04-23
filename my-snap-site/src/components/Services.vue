@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="section">
+  <section id="services" class="section" style="margin-top: 150px;">
     <h2>Services Offered</h2>
     <div class="services-container">
       <div class="service">
@@ -35,3 +35,27 @@ export default {
   name: 'ServicesSection',
 };
 </script>
+
+<style scoped>
+.section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+}
+</style>
