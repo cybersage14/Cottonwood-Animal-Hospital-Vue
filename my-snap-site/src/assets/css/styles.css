@@ -4,6 +4,10 @@
     padding: 0;
   }
   
+  .main-content {
+    margin-top: 70px; /* Adjust the value as needed */
+  }
+
   body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
@@ -172,6 +176,16 @@
 .service h3 {
   font-size: 24px;
   margin-bottom: 10px;
+}
+
+.services-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  text-align: center;
 }
 
 

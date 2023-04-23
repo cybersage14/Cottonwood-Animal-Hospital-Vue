@@ -1,24 +1,25 @@
 <template>
-  <div class="home">
-    <!-- Hero Section -->
+  <div class="main-content">
     <section class="hero">
-      <div class="container">
-        <h1>Compassionate Veterinarians</h1>
-        <p>Here for you and your pet's needs!.</p>
-      </div>
+      <!-- Hero image and text go here -->
     </section>
-
-    <!-- Services Section -->
-    <section class="services">
-      <div class="container">
-        <h2>Our Services</h2>
-        <!-- Add the Services component here -->
-        <Services />
+    <section class="services-section">
+      <!-- Services list with images go here -->
+      <div class="services">
+        <img src="path/to/image.jpg" alt="Service 1">
+        <h3>Service 1</h3>
+        <p>Description of Service 1</p>
       </div>
+      <!-- Add more services here -->
     </section>
-
+    <section class="about-section">
+      <!-- About text and image go here -->
+    </section>
+    <section class="contact-section">
+      <!-- Contact information goes here -->
+    </section>
     <!-- Call to Action Section -->
-    <section class="cta">
+    <section class="cta-section">
       <div class="container">
         <h2>Ready to Book an Appointment?</h2>
         <p>Contact us today to schedule an appointment for your pet.</p>
@@ -28,13 +29,11 @@
   </div>
 </template>
 
-<script>
-import Services from "./Services.vue";
 
+<script>
 export default {
   name: "HomePage",
   components: {
-    Services,
   },
 };
 </script>
