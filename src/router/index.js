@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../components/Home.vue';
 import About from '../components/About.vue';
 import Services from '../components/Services.vue';
@@ -12,7 +12,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(process.env.NODE_ENV === 'production' ? '/my-snap-site/' : '/'),
   routes,
 });
 
