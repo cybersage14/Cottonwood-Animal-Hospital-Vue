@@ -8,6 +8,7 @@
         <li><router-link to="/" class="nav-link">Home</router-link></li>
         <li><router-link to="/about" class="nav-link">About</router-link></li>
         <li><router-link to="/services" class="nav-link">Services</router-link></li>
+        <li><router-link to="/duke">In Memory of Duke</router-link></li>
       </ul>
     </nav>
     <div class="contact-btn-container">

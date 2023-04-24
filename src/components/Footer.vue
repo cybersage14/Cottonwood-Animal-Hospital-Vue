@@ -1,8 +1,7 @@
 <template>
     <footer>
       <div class="footer-content">
-        <p>Little Cottonwood Animal Hospital &copy; 2023</p>
-        <!-- Add more footer content here -->
+        <p>This website is NOT the official website of Little Cottonwood Animal Hospital &copy; 2023</p>
       </div>
       <div class="social-buttons">
         <a href="https://www.snapchat.com" target="_blank">
