@@ -35,7 +35,7 @@ footer {
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -43,6 +43,7 @@ footer {
 .footer-content p {
   font-size: 16px;
   margin: 0;
+  color: white;
 }
 
 .social-buttons {
@@ -50,6 +51,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 15px;
+  margin-top: 15px;
 }
 
 .social-buttons button {

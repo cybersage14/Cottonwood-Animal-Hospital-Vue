@@ -22,6 +22,15 @@
     padding: 50px 0;
   }
   
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
   .cta-button {
     display: inline-block;
     padding: 15px 30px;
@@ -39,4 +48,4 @@
   }
   </style>
   
-  
+   
