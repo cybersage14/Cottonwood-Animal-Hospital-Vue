@@ -8,9 +8,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "predeploy": "npm run build",
-    "copyIndex": "cp index.html 404.html",
-    "upLevel": "cd ..",
-    "deploy": "gh-pages -d dist"
+    "deploy": "cd dist & cp index.html 404.html & cd .. & gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.8.3",
