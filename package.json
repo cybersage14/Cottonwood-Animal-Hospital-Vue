@@ -2,7 +2,7 @@
   "name": "my-snap-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://darenshamoun.github.io/my-snap-site/",
+  "homepage": "/my-snap-site/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
