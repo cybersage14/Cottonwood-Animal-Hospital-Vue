@@ -48,18 +48,18 @@ export default {
   padding: 50px 0;
 }
 
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
 .service {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f8f8f8;
   overflow: hidden;
-}
-
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
 }
 
 .service img {
@@ -70,9 +70,14 @@ export default {
   margin-bottom: 1rem;
 }
 
-
 .service h3 {
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 }
 </style>
 

@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 .hero {
-  height: 50vh;
+  height: 60vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/img/home_page1.jpg');
   background-size: cover;
   background-position: center;
@@ -27,20 +27,28 @@ export default {
   flex-direction: column;
   color: #ffffff;
   text-align: center;
-  margin-top: 100px;
 }
 
 .hero h1 {
-  color: white;
   font-size: 48px;
   margin-bottom: 20px;
 }
 
 .hero p {
-  color: white;
   font-size: 24px;
   max-width: 800px;
   margin: 0 auto;
 }
 
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
+}
 </style>

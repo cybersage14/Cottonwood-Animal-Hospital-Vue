@@ -1,15 +1,13 @@
 <template>
-  <div class="main-content">
-    <div id="app">
-      <AppHeader />
-      <router-view></router-view>
-      <Footer />
-    </div>
+  <div id="app">
+    <AppHeader />
+    <div class="container">
+      <router-view />
+</div>
+<Footer />
+
   </div>
-
 </template>
-
-
 <script>
 import AppHeader from './components/Header.vue';
 import Footer from './components/Footer.vue';

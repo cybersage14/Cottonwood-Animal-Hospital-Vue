@@ -59,5 +59,10 @@ export default {
 .phone-email a:hover {
   text-decoration: underline;
 }
-</style>
 
+@media (max-width: 768px) {
+  .contact-info {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+</style>
