@@ -1,5 +1,5 @@
 # SnapChatEngineeringProject
-Website built for the snapchat engineering technical interview! Featuring my favorite LA business --fill in name--
+Website built for the snapchat engineering project assessment! Featuring a small LA business named Little Cottonwood Animal Hospital.
 
 I have never created a website using JS or Vue or any other coding language to be honest, 
 Personally have only used plug and play tools to create my own websites thus far and I have kept my distance from front end. 
