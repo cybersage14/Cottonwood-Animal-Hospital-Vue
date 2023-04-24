@@ -19,10 +19,14 @@ app.use(router);
 app.directive('smooth-scroll', {
   beforeMount(el) {
     el.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetElement = document.querySelector(el.getAttribute('href'));
-      if (targetElement) {
+      const targetHref = el.getAttribute('href');
+      const targetElement = document.querySelector(targetHref);
+      if (targetElement && targetHref.startsWith('#')) {
+        e.preventDefault();
         targetElement.scrollIntoView({ behavior: 'smooth' });
+      } else if (targetHref.startsWith('/')) {
+        e.preventDefault();
+        router.push(targetHref);
       }
     });
   },
