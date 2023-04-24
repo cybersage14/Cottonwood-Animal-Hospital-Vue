@@ -1,5 +1,5 @@
 <template>
-  <section id="AboutSection" class="section" style="margin-top: 80px;">
+  <section id="AboutSection" class="section" style="margin-top: 50px;">
     <h2>About Little Cottonwood Animal Hospital</h2>
     <div class="container">
     <p>
