@@ -1,34 +1,53 @@
 <template>
-    <section style="margin-top: 200px;">
-      <h1>Contact Us</h1>
-      <p>
-        We'd love to hear from you! If you have any questions, suggestions, or
-        concerns, please feel free to get in touch.
-      </p>
-      <p>Email: info@littlecottonwoodah.com</p>
-      <p>Phone: +1 (562) 372-6642</p>
-    </section>
-  </template>
-  
-  <script>
-  export default {
-    name: "ContactComponent",
-  };
-  </script>
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div class="hours">
+        <h4>Hours</h4>
+        <p>Monday - Friday: 8am - 6pm</p>
+        <p>Saturday: 8am - 12pm</p>
+        <p>Sunday: Closed</p>
+      </div>
+      <div class="address">
+        <h4>Address</h4>
+        <p>4102 Katella Ave</p>
+        <p>Los Alamitos, CA</p>
+        <p>90720</p>
+      </div>
+      <div class="phone-email">
+        <h4>Phone</h4>
+        <p><a href="tel:5623726642">(562)-372-6642</a></p>
+        <h4>Email</h4>
+        <p><a href="mailto:info@littlecottonwoodah.com">info@littlecottonwoodah.com</a></p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "ContactPage",
+};
+</script>
 
 <style scoped>
-section {
-  text-align: center;
-  padding: 50px 0;
+.contact {
+  /* Add your preferred styling */
 }
 
-h1 {
-  margin-bottom: 20px;
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
-p {
-  font-size: 1.2rem;
+.phone-email a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.phone-email a:hover {
+  text-decoration: underline;
 }
 </style>
-
-  
