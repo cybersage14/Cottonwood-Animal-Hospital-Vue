@@ -1,17 +1,17 @@
 <template>
   <header :class="{ 'shrink': shrinkHeader }">
     <div class="logo">
-      <a href="/"><img :src="logo" alt="Little Cottonwood Animal Hospital"></a>
+      <router-link to="/"><img :src="logo" alt="Little Cottonwood Animal Hospital"></router-link>
     </div>
     <nav>
       <ul>
-        <li><a href="/my-snap-site/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
+        <li><router-link to="/" class="nav-link">Home</router-link></li>
+        <li><router-link to="/about" class="nav-link">About</router-link></li>
+        <li><router-link to="/services" class="nav-link">Services</router-link></li>
       </ul>
     </nav>
     <div class="contact-btn-container">
-      <a href="/contact" class="contact-btn">Contact</a>
+      <router-link to="/contact" class="contact-btn">Contact</router-link>
     </div>
   </header>
 </template>
@@ -20,9 +20,9 @@
 export default {
   name: "HeaderComponent",
   data() {
-  return {
-    shrinkHeader: false,
-    logo: require('@/assets/img/logo.png'), // use require to resolve the path
+    return {
+      shrinkHeader: false,
+      logo: require('@/assets/img/logo.png'),
     };
   },
   mounted() {
