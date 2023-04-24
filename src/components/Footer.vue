@@ -29,33 +29,46 @@ export default {
 footer {
   background-color: #2980b9;
   color: white;
-  padding: 20px 0;
+  padding: 40px 0;
   text-align: center;
 }
 
-.footer-logo img {
-  width: 150px;
-  height: auto;
-  margin-bottom: 20px;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.footer-links {
+.footer-content p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.social-buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 15px;
 }
 
-.footer-links a {
+.social-buttons button {
+  background-color: #3498db;
+  border: none;
   color: white;
+  padding: 10px 15px;
+  text-align: center;
   text-decoration: none;
-  margin: 0 10px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-copyright {
-  font-size: 14px;
+.social-buttons button:hover {
+  background-color: #1a5f86;
 }
 </style>
+

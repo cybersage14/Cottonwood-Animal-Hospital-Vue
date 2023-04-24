@@ -24,11 +24,13 @@
   
   .cta-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #2980b9;
     color: #ffffff;
     text-decoration: none;
     border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
     transition: background-color 0.3s;
   }
   
@@ -36,4 +38,5 @@
     background-color: #1a5f86;
   }
   </style>
+  
   
