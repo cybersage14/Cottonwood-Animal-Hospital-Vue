@@ -6,7 +6,8 @@ import Contact from '../components/Contact.vue';
 import Duke from '../components/Duke.vue';
 
 
-const routes = [
+const routes = 
+[
   { path: '/', component: Home },
   { path: '/about', component: About },
   { path: '/services', component: Services },

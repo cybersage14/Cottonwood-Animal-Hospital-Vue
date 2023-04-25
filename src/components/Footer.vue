@@ -14,11 +14,10 @@
           <button>Facebook</button>
         </a>
       </div>
-
     </footer>
   </template>
   
-  <script>
+<script>
 export default {
   name: 'AppFooter',
 };

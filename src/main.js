@@ -16,15 +16,21 @@ const app = createApp(App);
 app.use(router);
 
 // Add this code for smooth scrolling
-app.directive('smooth-scroll', {
-  beforeMount(el) {
-    el.addEventListener('click', (e) => {
+app.directive('smooth-scroll', 
+{
+  beforeMount(el) 
+  {
+    el.addEventListener('click', (e) => 
+    {
       const targetHref = el.getAttribute('href');
       const targetElement = document.querySelector(targetHref);
-      if (targetElement && targetHref.startsWith('#')) {
+      if (targetElement && targetHref.startsWith('#')) 
+      {
         e.preventDefault();
         targetElement.scrollIntoView({ behavior: 'smooth' });
-      } else if (targetHref.startsWith('/')) {
+      } 
+      else if (targetHref.startsWith('/')) 
+      {
         e.preventDefault();
         router.push(targetHref);
       }

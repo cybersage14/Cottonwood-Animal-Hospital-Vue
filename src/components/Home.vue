@@ -15,9 +15,11 @@ import AboutSection from './About.vue';
 import CallToActionSection from './CallToAction.vue';
 import ContactSection from './Contact.vue';
 
-export default {
+export default 
+{
   name: "HomePage",
-  components: {
+  components: 
+  {
     HeroSection,
     ServicesSection,
     AboutSection,

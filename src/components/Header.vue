@@ -18,22 +18,28 @@
 </template>
 
 <script>
-export default {
+export default 
+{
   name: "HeaderComponent",
-  data() {
+  data() 
+  {
     return {
       shrinkHeader: false,
       logo: require('@/assets/img/logo.png'),
     };
   },
-  mounted() {
+  mounted() 
+  {
     window.addEventListener("scroll", this.handleScroll);
   },
-  unmounted() {
+  unmounted() 
+  {
     window.removeEventListener("scroll", this.handleScroll);
   },
-  methods: {
-    handleScroll() {
+  methods: 
+  {
+    handleScroll() 
+    {
       this.shrinkHeader = window.scrollY > 60;
     },
   },
