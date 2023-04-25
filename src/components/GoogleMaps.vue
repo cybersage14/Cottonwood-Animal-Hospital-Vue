@@ -4,7 +4,8 @@
             <h2>Our Location</h2>
             <p>123 Main St, Los Alamitos, CA 90720</p>
             <h3>Contact</h3>
-            <p>(562) 123-4567</p>
+            <p><a href="tel:5623726642">(562)-372-6642</a></p>
+            <p><a href="mailto:info@littlecottonwoodah.com">info@littlecottonwoodah.com</a></p>
             <h3>Hours of Operation</h3>
             <p>Mon-Fri: 8am-6pm</p>
             <p>Sat: 9am-3pm</p>
@@ -49,7 +50,7 @@ export default {
       });
     },
     initGoogleMaps() {
-      const location = { lat: 33.803069, lng: -118.071331 };
+      const location = { lat: 33.802675, lng: -118.061435 };
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 16,
         center: location,

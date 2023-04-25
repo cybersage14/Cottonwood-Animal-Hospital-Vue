@@ -2,10 +2,9 @@
   <div class="main-content">
     <HeroSection />
     <ServicesSection />
-    <AboutSection />
     <CallToActionSection />
     <GoogleMapsSection />
-    <ContactSection />
+    <AboutSection />
   </div>
 </template>
 
@@ -14,7 +13,6 @@ import HeroSection from './Hero.vue';
 import ServicesSection from './Services.vue';
 import AboutSection from './About.vue';
 import CallToActionSection from './CallToAction.vue';
-import ContactSection from './Contact.vue';
 import GoogleMapsSection from "./GoogleMaps.vue";
 
 export default 
@@ -26,7 +24,6 @@ export default
     ServicesSection,
     AboutSection,
     CallToActionSection,
-    ContactSection,
     GoogleMapsSection,
   },
 };
