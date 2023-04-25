@@ -7,6 +7,7 @@
     <Footer />
   </div>
 </template>
+
 <script>
 import AppHeader from './components/Header.vue';
 import Footer from './components/Footer.vue';
