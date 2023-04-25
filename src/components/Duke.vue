@@ -5,10 +5,18 @@
     </section>
     <section class="duke-tribute">
       <p>
-        Duke was a beloved friend and companion who brought joy and happiness to
-        everyone around him. He will always be remembered for his playful spirit,
-        loyalty, and unconditional love. May his memory live on in our hearts
-        forever.
+        Duke was the best dog a man could ask for he was a loyal friend and companion who brought joy and happiness to
+        everyone around him.
+      </p>
+      <p>
+        He will always be remembered for his playful spirit, loyalty, 
+        unconditional love and of course his goofyness.
+      </p>
+      <p>
+        May his memory live on in our hearts forever.
+      </p>
+      <p>
+        We love you Duke. 
       </p>
     </section>
     <section class="duke-gallery">
