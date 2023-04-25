@@ -14,58 +14,52 @@
     </section>
 </template>
 
-
-
 <script>
 /* global google */
 
 export default {
   name: "GoogleMaps",
   async mounted() {
-  try {
-    await this.loadScript();
-    this.initGoogleMaps();
-  } catch (error) {
-    console.error('Failed to load Google Maps script:', error);
-  }
-},
-
-  methods: 
-  {
-    loadScript() {
-  return new Promise((resolve, reject) => {
-    if (window.google) {
-      resolve();
-      return;
+    try {
+      await this.loadScript();
+      this.initGoogleMaps();
+    } catch (error) {
+      console.error('Failed to load Google Maps script:', error);
     }
+  },
+  methods: {
+    loadScript() {
+      return new Promise((resolve, reject) => {
+        if (window.google) {
+          resolve();
+          return;
+        }
 
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCljbibRJZ-nGsvB3kPKHrASADENDZe2rI&callback=initGoogleMapsApi`;
-    script.async = true;
-    script.defer = true;
-    script.onerror = reject;
-    document.head.appendChild(script);
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCljbibRJZ-nGsvB3kPKHrASADENDZe2rI&callback=initGoogleMapsApi`;
+        script.async = true;
+        script.defer = true;
+        script.onerror = reject;
+        document.head.appendChild(script);
 
-    window.initGoogleMapsApi = () => {
-      resolve();
-      delete window.initGoogleMapsApi;
-    };
-  });
+        window.initGoogleMapsApi = () => {
+          resolve();
+          delete window.initGoogleMapsApi;
+        };
+      });
     },
-
     initGoogleMaps() {
-  const location = { lat: 33.803069, lng: -118.071331 };
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 16,
-    center: location,
-  });
-  const marker = new google.maps.Marker({
-    position: location,
-    map: map,
-  });
-},
-
-},
+      const location = { lat: 33.803069, lng: -118.071331 };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 16,
+        center: location,
+      });
+      new google.maps.Marker({
+        position: location,
+        map: map,
+      });
+    },
+  },
 };
 </script>
 
@@ -106,4 +100,3 @@ border-radius: 5px;
 }
 }
 </style>
-  
