@@ -4,6 +4,7 @@
     <ServicesSection />
     <AboutSection />
     <CallToActionSection />
+    <GoogleMapsSection />
     <ContactSection />
   </div>
 </template>
@@ -14,6 +15,7 @@ import ServicesSection from './Services.vue';
 import AboutSection from './About.vue';
 import CallToActionSection from './CallToAction.vue';
 import ContactSection from './Contact.vue';
+import GoogleMapsSection from "./GoogleMaps.vue";
 
 export default 
 {
@@ -25,6 +27,7 @@ export default
     AboutSection,
     CallToActionSection,
     ContactSection,
+    GoogleMapsSection,
   },
 };
 </script>
