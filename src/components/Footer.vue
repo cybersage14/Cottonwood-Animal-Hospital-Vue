@@ -44,6 +44,7 @@ footer {
   color: white;
 }
 
+/* general social buttons */
 .social-buttons button {
   border: none;
   padding: 10px 15px;

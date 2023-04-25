@@ -20,6 +20,7 @@
 <script>
 export default 
 {
+  // this section is for the header
   name: "HeaderComponent",
   data() 
   {
@@ -28,6 +29,7 @@ export default
       logo: require('@/assets/img/logo.png'),
     };
   },
+  // this section allows the header to shrink when scrolling
   mounted() 
   {
     window.addEventListener("scroll", this.handleScroll);

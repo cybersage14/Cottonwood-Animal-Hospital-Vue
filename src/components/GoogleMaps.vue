@@ -19,6 +19,7 @@
 /* global google */
 
 export default {
+  // this section imports the Google Maps API and initializes the map
   name: "GoogleMaps",
   async mounted() {
     try {
@@ -29,13 +30,13 @@ export default {
     }
   },
   methods: {
+    // this section loads the Google Maps API
     loadScript() {
       return new Promise((resolve, reject) => {
         if (window.google) {
           resolve();
           return;
         }
-
         const script = document.createElement('script');
         script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCljbibRJZ-nGsvB3kPKHrASADENDZe2rI&callback=initGoogleMapsApi`;
         script.async = true;
@@ -49,12 +50,14 @@ export default {
         };
       });
     },
+    // this section initializes the map
     initGoogleMaps() {
       const location = { lat: 33.802675, lng: -118.061435 };
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 16,
         center: location,
       });
+      // this section adds a marker to the map
       new google.maps.Marker({
         position: location,
         map: map,
@@ -85,6 +88,7 @@ max-width: 75%;
 border-radius: 5px;
 }
 
+/* this section makes the map responsive */
 @media screen and (max-width: 1024px) {
 .google-maps-section {
     flex-direction: column;

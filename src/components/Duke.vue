@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style scoped>
+/* background image of duke */
 .duke-hero {
   background-image: url("@/assets/img/DukeGallery/DukeMain.jpg");
   background-position: center;
@@ -66,6 +67,7 @@ export default {
   text-align: center;
 }
 
+/* gallery for duke */
 .duke-gallery {
   padding: 2rem 0;
 }
