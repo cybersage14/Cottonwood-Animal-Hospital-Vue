@@ -13,9 +13,10 @@ import router from './router';
 // Create a new Vue instance and mount it to the #app element in the DOM
 const app = createApp(App);
 
+// Mount the router to the Vue instance
 app.use(router);
 
-// Add this code for smooth scrolling
+// This portion controls the smooth scrolling
 app.directive('smooth-scroll', 
 {
   beforeMount(el) 

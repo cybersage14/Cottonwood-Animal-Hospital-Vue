@@ -43,7 +43,6 @@ export default {
 </script>
 
 <style scoped>
-/* Modify the following styles to match your desired color palette and design */
 .duke-hero {
   background-image: url("@/assets/img/DukeGallery/DukeMain.jpg");
   background-position: center;
