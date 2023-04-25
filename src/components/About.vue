@@ -3,8 +3,18 @@
     <h2>About Little Cottonwood Animal Hospital</h2>
     <div class="container">
     <p>
-      Little Cottonwood Animal Hospital is a full-service veterinary hospital located in the heart of Sandy, Utah. Our dedicated staff of veterinarians, technicians, and support staff are committed to providing compassionate and exceptional care to your pets. We offer a wide range of services, including preventive care, diagnostics, surgery, dental care, and more. Our state-of-the-art facility is equipped with the latest technology to ensure your pet receives the best possible care.
+      Little Cottonwood Animal Hospital is a Full-Service Small Animal Veterinary Hospital 
+      located in Los Alamitos, California. We welcome both emergency cases as well as pets 
+      in need of routine medical, surgical and dental care. Our dedicated staff of veterinarians, 
+      technicians, and support staff are committed to providing compassionate and 
+      exceptional care to your pets. We offer a wide range of services, including 
+      preventive care, diagnostics, surgery, dental care, and more. Our state-of-the-art 
+      facility is equipped with the latest technology to ensure your pet receives the best 
+      possible care.
     </p>
+    <p2>
+      ESTABLISHED 2020
+    </p2>
     <veterinarians />
   </div>
   </section>
@@ -34,5 +44,12 @@ h2 {
 
 p {
   font-size: 1.2rem;
+}
+
+p2 { 
+  color: rgb(126, 125, 125);
+  font-size: 0.8rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 </style>

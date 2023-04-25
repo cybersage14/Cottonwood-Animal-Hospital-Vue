@@ -2,13 +2,13 @@
     <section class="google-maps-section">
         <div class="location-details">
             <h2>Our Location</h2>
-            <p>123 Main St, Los Alamitos, CA 90720</p>
+            <p>4102 Katella Ave, Los Alamitos, CA 90720</p>
             <h3>Contact</h3>
             <p><a href="tel:5623726642">(562)-372-6642</a></p>
             <p><a href="mailto:info@littlecottonwoodah.com">info@littlecottonwoodah.com</a></p>
             <h3>Hours of Operation</h3>
             <p>Mon-Fri: 8am-6pm</p>
-            <p>Sat: 9am-3pm</p>
+            <p>Sat: 8am-12pm</p>
             <p>Sun: Closed</p>
         </div>
         <div id="map"></div>
@@ -81,7 +81,7 @@ max-width: 40%;
 #map {
 flex: 2;
 height: 400px;
-max-width: 60%;
+max-width: 75%;
 border-radius: 5px;
 }
 
