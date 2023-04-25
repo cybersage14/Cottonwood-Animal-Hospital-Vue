@@ -14,29 +14,58 @@
     </section>
 </template>
 
+
+
 <script>
 /* global google */
 
 export default {
   name: "GoogleMaps",
-  mounted() {
-    this.initMap();
-  },
-  methods: {
-    initMap() {
-      const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 33.803073, lng: -118.073593 },
-        zoom: 16,
-      });
+  async mounted() {
+  try {
+    await this.loadScript();
+    this.initGoogleMaps();
+  } catch (error) {
+    console.error('Failed to load Google Maps script:', error);
+  }
+},
 
-      // eslint-disable-next-line no-unused-vars
-      const marker = new google.maps.Marker({
-        position: { lat: 33.803073, lng: -118.073593 },
-        map,
-        title: "Little Cottonwood Animal Hospital",
-      });
+  methods: 
+  {
+    loadScript() {
+  return new Promise((resolve, reject) => {
+    if (window.google) {
+      resolve();
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyCljbibRJZ-nGsvB3kPKHrASADENDZe2rI&callback=initGoogleMapsApi`;
+    script.async = true;
+    script.defer = true;
+    script.onerror = reject;
+    document.head.appendChild(script);
+
+    window.initGoogleMapsApi = () => {
+      resolve();
+      delete window.initGoogleMapsApi;
+    };
+  });
     },
-  },
+
+    initGoogleMaps() {
+  const location = { lat: 33.803069, lng: -118.071331 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 16,
+    center: location,
+  });
+  const marker = new google.maps.Marker({
+    position: location,
+    map: map,
+  });
+},
+
+},
 };
 </script>
 
