@@ -1,4 +1,5 @@
 <template>
+  <!-- Create an about section with a specific ID and class -->
   <section id="AboutSection" class="section" style="margin-top: 50px;">
     <h2>About Little Cottonwood Animal Hospital</h2>
     <div class="container">
@@ -21,8 +22,10 @@
 </template>
 
 <script>
+// Import the Veterinarians component
 import Veterinarians from "@/components/Veterinarians.vue";
 
+// Export the AboutPage component and register the Veterinarians component
 export default {
   name: "AboutPage",
   components: {
@@ -33,15 +36,18 @@ export default {
 
 
 <style scoped>
+/* Define styles for the section class */
 .section {
   text-align: center;
   padding: 50px 0;
 }
 
+/* Add margin-bottom to h2 elements */
 h2 {
   margin-bottom: 20px;
 }
 
+/* Set font-size for p elements */
 p {
   font-size: 1.2rem;
 }

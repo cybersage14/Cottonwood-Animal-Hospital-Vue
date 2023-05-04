@@ -1,8 +1,11 @@
 <template>
+  <!-- Create a services section with a specific ID and class -->
   <section id="services" class="section" style="margin-top: 150px;">
+    <!-- Add a hero section for Duke -->
     <section class="duke-hero">
       <h1>In Loving Memory of Duke</h1>
     </section>
+    <!-- Add a tribute section for Duke -->
     <section class="duke-tribute">
       <p>
         Duke was the best dog a man could ask for he was a loyal friend and companion who brought joy and happiness to
@@ -19,8 +22,10 @@
         We love you Duke. 
       </p>
     </section>
+    <!-- Add a gallery section for Duke -->
     <section class="duke-gallery">
       <h2>Memories of Duke</h2>
+      <!-- Add a container for the gallery images -->
       <div class="duke-gallery-container">
         <img src="@/assets/img/DukeGallery/duke.jpg" alt="Duke image 1" />
         <img src="@/assets/img/DukeGallery/duke1.jpg" alt="Duke image 2" />
@@ -37,13 +42,14 @@
 </template>
 
 <script>
+// Export the DukePage component
 export default {
   name: "DukePage",
 };
 </script>
 
 <style scoped>
-/* background image of duke */
+/* Define styles for the h1 element in the duke-hero section */
 .duke-hero {
   background-image: url("@/assets/img/DukeGallery/DukeMain.jpg");
   background-position: center;
@@ -55,28 +61,32 @@ export default {
   justify-content: center;
 }
 
+/* Define styles for the h1 element in the duke-hero section */
 .duke-hero h1 {
   color: #ffffff;
   font-size: 3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Define styles for the duke-tribute section */
 .duke-tribute {
   background-color: #f5f5f5;
   padding: 2rem;
   text-align: center;
 }
 
-/* gallery for duke */
+/* Define styles for the duke-gallery section */
 .duke-gallery {
   padding: 2rem 0;
 }
 
+/* Define styles for the h2 element in the duke-gallery section */
 .duke-gallery h2 {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
+/* Define styles for the duke-gallery-container */
 .duke-gallery-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -84,6 +94,7 @@ export default {
   justify-items: center;
 }
 
+/* Define styles for the images in the duke-gallery */
 .duke-gallery img {
   width: 100%;
   height: auto;
@@ -92,6 +103,7 @@ export default {
   border-radius: 5px;
 }
 
+/* Media query for screens with a min-width of 768px */
 @media screen and (min-width: 768px) {
   .duke-hero {
     background-size: cover;

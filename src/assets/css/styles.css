@@ -1,3 +1,4 @@
+/* Apply global styles to the body element */
 body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -7,12 +8,14 @@ body {
   background-color: #f5f5f5;
 }
 
+/* Set the maximum width, margin, and padding for the container class */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+/* Add a background color, padding, and border-radius to the content-container class */
 .content-container {
   background-color: #ffffff;
   padding: 30px;
@@ -20,27 +23,35 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Set the color for h1 elements */
 h1{
   color: #ffffff
 }
 
+/* Set the color for h2 and h3 elements */
 h2, h3 {
   color: #333;
 }
 
+/* Set the color for p elements */
 p {
   color: #666;
 }
 
+/* Set the color and text-decoration for a elements */
 a {
   color: #3498db;
   text-decoration: none;
 }
 
+/* Change the color of a elements on hover */
 a:hover {
   color: #2980b9;
 }
 
+/* Media query for screens with a max-width of 1200px /
+@media (max-width: 1200px) {
+/ Update padding for the container class on smaller screens */
 @media (max-width: 1200px) {
   .container {
     padding: 0 10px;
