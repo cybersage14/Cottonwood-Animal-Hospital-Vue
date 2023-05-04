@@ -1,8 +1,12 @@
 <template>
+  <!-- Veterinarians section -->
     <section class="veterinarians">
       <h2>Veterinarians</h2>
       <div class="container">
+        <!-- Veterinarians container -->
         <div class="veterinarians-container">
+          <!-- Individual veterinarian card -->
+          <!-- Uses v-for to loop through veterinarians array and render each card -->
           <div v-for="(vet, index) in veterinarians" :key="index" class="vet-card">
             <img :src="vet.image" alt="Veterinarian photo" class="vet-photo">
             <h3>{{ vet.name }}</h3>

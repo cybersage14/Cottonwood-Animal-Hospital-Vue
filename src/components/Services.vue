@@ -1,8 +1,11 @@
 <template>
+  <!-- Services section -->
   <section id="services" class="section" style="margin-top: 50px;">
     <h2>Services Offered</h2>
     <div class="container">
+      <!-- Services section -->
       <div class="services-container">
+        <!-- Individual services -->
         <div class="service">
           <img src="@/assets/img/Services/service1.jpg" alt="Service 1" />
           <h3>Preventive Care</h3>

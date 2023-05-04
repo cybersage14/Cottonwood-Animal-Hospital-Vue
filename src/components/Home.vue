@@ -1,5 +1,6 @@
 <template>
   <div class="main-content">
+    <!-- Components included in the Home page -->
     <HeroSection />
     <ServicesSection />
     <CallToActionSection />
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+// import components from other files
 import HeroSection from './Hero.vue';
 import ServicesSection from './Services.vue';
 import AboutSection from './About.vue';
@@ -20,6 +22,7 @@ export default
   name: "HomePage",
   components: 
   {
+    // Registering components used in the Home page
     HeroSection,
     ServicesSection,
     AboutSection,
@@ -30,17 +33,20 @@ export default
 </script>
 
 <style scoped>
+/* Services section styles */
 .services-section {
   text-align: center;
   padding: 50px 0;
 }
 
+/* Grid layout for services */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
+/* Service card styles */
 .service {
   padding: 20px;
   border: 1px solid #ddd;

@@ -1,8 +1,10 @@
 <template>
   <header :class="{ 'shrink': shrinkHeader }">
+    <!-- Logo section -->
     <div class="logo">
       <router-link to="/"><img :src="logo" alt="Little Cottonwood Animal Hospital"></router-link>
     </div>
+    <!-- Navigation section -->
     <nav>
       <ul>
         <li><router-link to="/" class="nav-link">Home</router-link></li>
@@ -11,6 +13,7 @@
         <li><router-link to="/duke">In Memory of Duke</router-link></li>
       </ul>
     </nav>
+    <!-- Contact button container -->
     <div class="contact-btn-container">
       <router-link to="/contact" class="contact-btn">Contact</router-link>
     </div>
@@ -20,7 +23,7 @@
 <script>
 export default 
 {
-  // this section is for the header
+  // HeaderComponent for the header
   name: "HeaderComponent",
   data() 
   {
@@ -40,6 +43,7 @@ export default
   },
   methods: 
   {
+    // Handle scroll event to shrink header
     handleScroll() 
     {
       this.shrinkHeader = window.scrollY > 60;
@@ -49,6 +53,7 @@ export default
 </script>
 
 <style scoped>
+/* Header styles */
 header {
   display: flex;
   justify-content: space-between;
@@ -68,6 +73,7 @@ header.shrink {
   padding: 10px;
 }
 
+/* Navigation styles */
 nav ul {
   display: flex;
   list-style: none;
@@ -85,16 +91,19 @@ nav ul li a {
   font-weight: bold;
 }
 
+/* Logo styles */
 .logo img {
   width: 150px;
   height: auto;
 }
 
+/* Contact button container styles */
 .contact-btn-container {
   display: flex;
   margin-right: 20px;
 }
 
+/* Contact button styles */
 .contact-btn {
   display: inline-block;
   padding: 10px 20px;

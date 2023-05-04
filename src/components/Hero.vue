@@ -1,4 +1,5 @@
 <template>
+  <!-- Hero section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Welcome to Little Cottonwood Animal Hospital</h1>
@@ -16,6 +17,7 @@ export default {
 </script>
 
 <style scoped>
+/* Hero section styles */
 .hero {
   height: 60vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@/assets/img/home_page1.jpg');
@@ -46,6 +48,7 @@ p {
   color: #ffffff;
 }
 
+/* Media query for responsive design */
 @media (max-width: 768px) {
   .hero {
     height: 40vh;

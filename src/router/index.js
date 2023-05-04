@@ -5,7 +5,7 @@ import Services from '../components/Services.vue';
 import Contact from '../components/Contact.vue';
 import Duke from '../components/Duke.vue';
 
-
+// Define the routes for the application
 const routes = 
 [
   { path: '/', component: Home },
@@ -15,6 +15,7 @@ const routes =
   { path: '/contact', component: Contact },
 ];
 
+// Create a new router instance with the defined routes and a WebHashHistory
 const router = createRouter({
   history: createWebHashHistory(),
   routes,

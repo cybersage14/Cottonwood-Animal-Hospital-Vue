@@ -1,8 +1,10 @@
 <template>
   <footer>
+    <!-- Footer content section -->
     <div class="footer-content">
       <p>This website is NOT the official website of Little Cottonwood Animal Hospital &copy; 2023</p>
     </div>
+    <!-- Social buttons section -->
     <div class="social-buttons">
       <a href="https://www.snapchat.com" target="_blank">
         <button class="snapchat-button">Snapchat</button>
@@ -18,6 +20,7 @@
 </template>
   
 <script>
+// Export the AppFooter component
 export default {
   name: 'AppFooter',
 };
@@ -73,8 +76,8 @@ footer {
   color: #ffffff;
 }
 
+/* Added a general hover effect for all buttons, like making them slightly darker */
 .social-buttons button:hover {
-  /* Add a general hover effect for all buttons, like making them slightly darker */
   filter: brightness(85%);
 }
 </style>

@@ -1,5 +1,7 @@
+<!-- This component displays a Google Map with a marker at a specific location -->
 <template>
     <section class="google-maps-section">
+      <!-- Location and contact details -->      
         <div class="location-details">
             <h2>Our Location</h2>
             <p>4102 Katella Ave, Los Alamitos, CA 90720</p>
@@ -11,6 +13,7 @@
             <p>Sat: 8am-12pm</p>
             <p>Sun: Closed</p>
         </div>
+        <!-- Container for the Google Map itself -->
         <div id="map"></div>
     </section>
 </template>
